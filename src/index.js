@@ -7,7 +7,7 @@ const {addUser, removeUser, getUser, getUsersInRoom} = require('./utils/users');
 
 const app = express();
 const server = http.createServer(app);
-const port = 3004;
+const port = process.env.PORT || 3004;
 const io = socketio(server);
 const Filter = require('bad-words');
 
